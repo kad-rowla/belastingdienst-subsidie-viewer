@@ -1,0 +1,1 @@
+{"version":3,"file":"getSubTag.js","sourceRoot":"src/","sources":["getSubTag.ts"],"names":[],"mappings":";;AAAA,6CAAmC;AAGnC,SAAwB,SAAS,CAAC,IAA2B,EAAE,MAAc;IAC3E,MAAM,KAAK,GAAG,oBAAO,CAAC,IAAI,CAAC,CAAC,MAAM,CAAC,WAAW,EAAE,CAAC,CAAC;IAClD,OAAO,oBAAO,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC;AACjC,CAAC;AAHD,4BAGC"}

@@ -1,0 +1,29 @@
+{
+  "author": "Triply <info@triply.cc>",
+  "type": "module",
+  "dependencies": {
+    "@triplyetl/etl": "^3.0.5"
+  },
+  "description": "Triply ETL for belastingdienst-subsidie-viewer",
+  "lint-staged": {
+    "*.ts?(x)": [
+      "npm run util:lint:precommit"
+    ]
+  },
+  "main": "lib/main.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "postversion": "versionToBranch",
+    "util:lint": "ESLINT_STRICT=true ESLINT_EXPENSIVE=true eslint --ext .tsx --ext .ts ./src",
+    "util:lint:precommit": "ESLINT_STRICT=true eslint",
+    "util:validateTs": "tsc --noEmit",
+    "util:validateTs:watch": "tsc --noEmit --watch --preserveWatchOutput"
+  },
+  "version": "1.0.0",
+  "resolutions": {
+    "@types/node": "18.15.0"
+  },
+  "name": "belastingdienst-subsidie-viewer"
+}

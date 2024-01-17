@@ -1,0 +1,29 @@
+base <https://data.pldn.nl/voor-bewoners/aanvragen/>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix shp: <https://data.pldn.nl/voor-bewoners/aanvragen/model/shp/>
+
+shp:Blokaansluiting
+  a sh:NodeShape;
+  sh:targetClass <Blokaansluiting>;
+  sh:rule shp:Blokaansluiting_verrijking.
+
+shp:Blokaansluiting_verrijking
+  a sh:SPARQLRule;
+  sh:construct '''
+prefix geo: <http://www.opengis.net/ont/geosparql#>
+prefix nen3610: <https://data.kkg.kadaster.nl/nen3610/model/def/>
+prefix sdo: <https://schema.org/>
+prefix sor: <https://data.kkg.kadaster.nl/sor/model/def/>
+construct {
+  $this geo:hasGeometry ?geometry.
+  ?geometry geo:asWKT ?wkt.
+} where {
+  $this sdo:identifier ?bagId.
+  service <https://api.labs.kadaster.nl/datasets/dst/kkg/services/default/sparql> {
+    ?gebouw
+      sor:geregistreerdMet/nen3610:identificatie ?bagId;
+      geo:hasGeometry ?geometry.
+    ?geometry geo:asWKT ?wkt.
+  }
+}
+limit 1'''.

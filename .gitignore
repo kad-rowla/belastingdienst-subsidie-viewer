@@ -1,0 +1,23 @@
+*.log
+etl.err
+etl.trace*
+# data
+# lib
+# node_modules
+npm-debug.log*
+# package-lock.json
+report.ttl.gz
+
+# Do not accidentally commit files which may contain private a private API Token.
+.etl*
+.env*
+# .npmrc
+
+# Based on https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

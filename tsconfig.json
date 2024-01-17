@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es6"],
+    "module": "NodeNext",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "listFiles": false,
+    "moduleResolution": "NodeNext",
+    "outDir": "./lib",
+    "rootDir": "./src"
+  },
+  "compileOnSave": true,
+  "include": ["src/**/*.ts"]
+}
