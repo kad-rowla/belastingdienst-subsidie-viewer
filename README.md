@@ -20,7 +20,7 @@ If this does not work, please make a token manually in the PLDN environment and 
 
 ### Upload File
 
-Once you have added your token to the .env file, upload this to the assets tab in this environment: https://data.pldn.nl/voor-bewoners/aanvragen. The tab is found above the insights tab on the left hand side of the screen. Here you will already see an uploaded CSV file, simply click on `upload a new version` and upload the new CSV file.
+Once you have added your token to the .env file, upload this to the assets tab in this environment: https://data.pldn.nl/voor-bewoners/aanvragen. The tab is above the insights tab on the left-hand side of the screen. Here you will already see an uploaded CSV file, simply click on `upload a new version` and upload the new CSV file.
 
 ### 2.1 Transpile
 
@@ -37,9 +37,9 @@ The following command runs your ETL:
 ```sh
 npx etl lib/main.js
 ```
-Your ETL is expected to tak around 40 minutes. 
+Your ETL is expected to take around 40 minutes. 
 
 ## 2.3 Clean 
 Once you have finalised the ETL, you should see two graphs in this environment: https://data.pldn.nl/voor-bewoners/aanvragen/graphs. Delete the oldest graph.
 
-Once that is deleted, go to the services tab on the left hand side of the screen and update the service. The data will now be showing the latest data from the CSV. 
+Once that is deleted, go to the services tab on the left-hand side of the screen and update the service. The data will now show the latest data from the CSV. 
