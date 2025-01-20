@@ -11,19 +11,21 @@ shp:Blokaansluiting_verrijking
   a sh:SPARQLRule;
   sh:construct '''
 prefix geo: <http://www.opengis.net/ont/geosparql#>
-prefix nen3610: <https://data.kkg.kadaster.nl/nen3610/model/def/>
+prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>
 prefix sdo: <https://schema.org/>
-prefix sor: <https://data.kkg.kadaster.nl/sor/model/def/>
+prefix imxgeo: <http://modellen.geostandaarden.nl/def/imx-geo#>
+prefix ext: <https://modellen.kkg.kadaster.nl/def/imxgeo-ext#>
 construct {
   $this geo:hasGeometry ?geometry.
   ?geometry geo:asWKT ?wkt.
 } where {
   $this sdo:identifier ?bagId.
-  service <https://api.labs.kadaster.nl/datasets/dst/kkg/services/default/sparql> {
-    ?gebouw
-      sor:geregistreerdMet/nen3610:identificatie ?bagId;
-      geo:hasGeometry ?geometry.
-    ?geometry geo:asWKT ?wkt.
+  service <https://api.labs.kadaster.nl/datasets/kadaster/kkg/services/kkg/sparql> {
+    ?gebouw 
+          prov:wasDerivedFrom ?bagPand ;
+          ext:bovenaanzichtgeometrie/geo:asWKT ?wkt .
+    ?bagPand a bag:Pand ;
+          nen3610:identificatie ?bagId .
   }
 }
 limit 1'''.
