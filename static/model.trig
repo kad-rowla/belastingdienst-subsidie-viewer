@@ -15,6 +15,7 @@ prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>
 prefix sdo: <https://schema.org/>
 prefix imxgeo: <http://modellen.geostandaarden.nl/def/imx-geo#>
 prefix ext: <https://modellen.kkg.kadaster.nl/def/imxgeo-ext#>
+prefix prov: <http://www.w3.org/ns/prov#>
 construct {
   $this geo:hasGeometry ?geometry.
   ?geometry geo:asWKT ?wkt.
