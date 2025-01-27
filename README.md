@@ -7,7 +7,7 @@ This is done with the following steps:
 
 **NOTE** *This step can be omitted if you already created or provided your token during setup of your project*
 ​
-Your TriplyDB API Token is your access key to TriplyDB. You can create one in TriplyDB using [this instructions](https://triply.cc/docs/api-token) or you can type (and follow the onscreen instructions):
+Your TriplyDB API Token is your access key to TriplyDB. You can create one in TriplyDB using [these instructions](https://triply.cc/docs/api-token) or you can type (and follow the onscreen instructions):
 
 ```sh
 npx tools create-token
