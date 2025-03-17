@@ -25,7 +25,7 @@ export default async function (): Promise<Etl> {
       [sdo.status, literal('status', xsd.string)],
       [sdo.identifier, literal('bagId', xsd.string)]
     ),
-    executeRules(Source.file('static/model.trig')),
+    executeRules(Source.file('../static/model.trig')),
     toTriplyDb({ dataset: 'aanvragen', account: 'voor-bewoners' })
   )
   return etl
