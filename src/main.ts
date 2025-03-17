@@ -19,7 +19,7 @@ export default async function (): Promise<Etl> {
       key: 'identifier'
     }),
     pairs('identifier',
-      [a, iri(baseIri, str('Blokaansluiting'))],
+      [a, iri(def, str('Blokaansluiting'))],
       [iri(def, str('aansluiting')), literal('aansluiting', xsd.string)],
       [sdo.dateCreated, literal('datum', xsd.string)],
       [sdo.status, literal('status', xsd.string)],
